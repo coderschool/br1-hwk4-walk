@@ -1,5 +1,11 @@
 # AnAn
 
+To set up, either fork the repo or clone it directly into an `AnThoi` folder:
+
+```
+git clone https://github.com/coderschool/br1-hwk4-walk.git AnThoi
+```
+
 **Coder Restaurant** is a Ruby on Rails restaurant website let users order foods.
 
 Submitted by: **Your Name**
