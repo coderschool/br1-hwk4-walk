@@ -7,13 +7,16 @@
                   class: "nav-link #{'active' if params[:section] == section.name}") %>
     </li>
   <% end %>
+</ul>
   <% if @food_items.present? %>
     <br><br>
     <% @food_items.each do |food_item| %>
-      =======<br>
-      name: <%= food_item.name %><br>
-      price: <%= food_item.price %><br>
-      description: <%= food_item.description %><br>
+    <div class="card fooditems" style="width: 20rem; margin: 10px; float: left">
+      <img class="card-img-top" src="<%= food_item.fake_image_url %>">
+      <div class="card-block">
+        <h4 class="card-title"><%= food_item.name %>: <%= food_item.price %></h4>
+        <p class="card-text"><%= food_item.description %></p>
+      </div>
+    </div>
     <% end %>
   <% end %>
-</ul>
