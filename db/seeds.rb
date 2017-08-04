@@ -24,3 +24,15 @@ if Section.count == 0
 else
   puts "Looks like you already have some sections!"
 end
+
+puts "Generating Dishes"
+
+sections = Section.all
+
+20.times do
+  FoodItem.create(
+    name: Faker::Food.dish,
+    section: sections.sample,
+    price: rand(10..200) * 1000 # price is between 10,000 VND and 200,000 VND
+  )
+end
