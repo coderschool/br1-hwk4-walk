@@ -14,8 +14,11 @@
     <div class="card fooditems" style="width: 20rem; margin: 10px; float: left">
       <img class="card-img-top" src="<%= food_item.fake_image_url %>">
       <div class="card-block">
-        <h4 class="card-title"><%= food_item.name %>: <%= food_item.price %></h4>
+        <h4 class="card-title">
+          <%= food_item.name %>:<br> <%= number_to_currency(food_item.price, unit: "VND ") %>
+        </h4>
         <p class="card-text"><%= food_item.description %></p>
+        <a href="#" class="btn btn-primary">Order</a>
       </div>
     </div>
     <% end %>
